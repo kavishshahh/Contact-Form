@@ -65,6 +65,19 @@ section::before {
     cursor: pointer;
 }
 
+.container .contactInfo ul.sci {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 59px;
+}
+
+.container .contactInfo ul.sci li {
+    margin-left: 13px;
+    list-style: none;
+}
+
 .container .contactInfo ul.info li span:nth-child(1) {
     width: 30px;
     max-width: 30px;
@@ -92,5 +105,80 @@ section::before {
     /* width: -moz-calc(100% - 88px);
     width: calc(100% - 88px); */
     height: 100%;
-    background-color: yellowgreen;
+    background-color: #cee5a0;
+}
+
+.container .contactForm h2 {
+    color: black;
+    font-size: 34px;
+    margin-top: -19px;
+}
+
+.container .contactForm .formBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.container .contactForm .formBox .inputBox {
+    position: relative;
+    margin-bottom: 44px;
+}
+
+.container .contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+
+.container .contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    color: #333;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox textarea {
+    height: 120px;
+}
+
+.container .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.container .contactForm .formBox .inputBox input:focus~span,
+.container .contactForm .formBox .inputBox input:valid~span,
+.container .contactForm .formBox .inputBox textarea:focus~span,
+.container .contactForm .formBox .inputBox textarea:valid~span {
+    transform: translateY(-22px);
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #095a55;
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 10px;
+}
+.container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #0d948b;
 }
